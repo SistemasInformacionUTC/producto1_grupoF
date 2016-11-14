@@ -25,11 +25,11 @@ public class Flash extends com.avaje.ebean.Model {
     /**
      * Generic query helper for entity Company with id Long
      */
-    public static Find<Long,Company> find = new Find<Long,Company>(){};
+    public static Find<Long,Flash> find = new Find<Long,Flash>(){};
 
     public static Map<String,String> options() {
         LinkedHashMap<String,String> options = new LinkedHashMap<String,String>();
-        for(Company c: Company.find.orderBy("name").findList()) {
+        for(Flash c: Flash.find.orderBy("name").findList()) {
             options.put(c.id.toString(), c.name);
         }
         return options;
