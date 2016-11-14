@@ -67,36 +67,36 @@
         <table class="computers zebra-striped">
             <thead>
                 <tr>
-                    @header("name", "Computer name")
+                    @header("name", "Flash name")
                     @header("introduced", "Introduced")
                     @header("discontinued", "Discontinued")
-                    @header("company.name", "Company")
+                    @header("company.name", "Flash")
                 </tr>
             </thead>
             <tbody>
 
                 @for(computer <- currentPage.getList) {
                     <tr>
-                        <td><a href="@routes.HomeController.edit(computer.id)">@computer.name</a></td>
+                        <td><a href="@routes.HomeController.edit(computer.id)">@Flash.name</a></td>
                         <td>
-                            @if(computer.introduced == null) {
+                            @if(Flash.introduced == null) {
                                 <em>-</em>
                             } else {
-                                @computer.introduced.format("dd MMM yyyy")
+                                @Flash.introduced.format("dd MMM yyyy")
                             }
                         </td>
                         <td>
-                            @if(computer.discontinued == null) {
+                            @if(Flash.discontinued == null) {
                                 <em>-</em>
                             } else {
-                                @computer.discontinued.format("dd MMM yyyy")
+                                @Flash.discontinued.format("dd MMM yyyy")
                             }
                         </td>
                         <td>
-                            @if(computer.company == null) {
+                            @if(Flash.company == null) {
                                 <em>-</em>
                             } else {
-                                @computer.company.name
+                                @Flash.Flash.name
                             }
                         </td>
                     </tr>

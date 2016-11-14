@@ -12,28 +12,28 @@
         
         <fieldset>
         
-            @b3.text(computerForm("name"), '_label -> "Computer name", '_help -> "")
-            @b3.date(computerForm("introduced"), '_label -> "Introduced date", '_help -> "")
-            @b3.date(computerForm("discontinued"), '_label -> "Discontinued date", '_help -> "")
+            @b3.text(FlashForm("name"), '_label -> "Flash name", '_help -> "")
+            @b3.date(FlashForm("introduced"), '_label -> "Introduced date", '_help -> "")
+            @b3.date(FlashForm("discontinued"), '_label -> "Discontinued date", '_help -> "")
             
             @b3.select(
-                computerForm("company.id"), 
-                options(Company.options), 
-                '_label -> "Company", '_default -> "-- Choose a company --",
+                FlashForm("Flash.id"), 
+                options(Flash.options), 
+                '_label -> "Flash", '_default -> "-- Choose a Flash --",
                 '_showConstraints -> false
             )
         
         </fieldset>
         
         <div class="actions">
-            <input type="submit" value="Save this computer" class="btn primary"> or 
+            <input type="submit" value="Save this Flash" class="btn primary"> or 
             <a href="@routes.HomeController.list()" class="btn">Cancel</a>
         </div>
         
     }
     
     @b3.form(routes.HomeController.delete(id), 'class -> "topRight") {
-        <input type="submit" value="Delete this computer" class="btn danger">
+        <input type="submit" value="Delete this Flash" class="btn danger">
     }
     
 }
