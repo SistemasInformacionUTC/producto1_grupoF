@@ -33,6 +33,9 @@ public class computadoras extends Model {
     @Constraints.Required(message=" ingresar su disco.")
     public String descripcio;
     
+    @Constraints.Required(message=" ingresar su disco.")
+    public String precio;
+    
     @Constraints.Required(message="marca")
 
 }
